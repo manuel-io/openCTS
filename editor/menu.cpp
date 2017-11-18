@@ -8,12 +8,12 @@ namespace Editor {
 
   Menu::Menu()
   {
-    buttons[0] = new Items("Botany", "assets/menu/plain.png", 10, 20,  10 + 50 + 10 + 50 + 10, 570 + 1 * 10, 50, 50);
+    buttons[0] = new Items("Botany", "assets/menu/botany.png", 10, 20,  10 + 50 + 10 + 50 + 10, 570 + 1 * 10, 50, 50);
     buttons[1] = new Items("Streets", "assets/menu/streets.png", 80, 100, 10, 570 + 10, 50, 50);  
     buttons[2] = new Items("Residentials", "assets/menu/residentials.png", 20, 40, 10, 570 + 50 + 2 * 10, 50, 50);
     buttons[3] = new Items("Work", "assets/menu/work.png", 40, 60, 10 + 50 + 10, 570 + 50 + 2 * 10, 50, 50);
     buttons[4] = new Items("Infrastructure", "assets/menu/infrastructure.png", 60, 80, 10 + 50 + 10, 570 + 10, 50, 50);
-    buttons[5] = new Items("Settings", "assets/menu/plain.png", 0, 0, 10 + 50 + 10 + 50 + 10, 570 + 50 + 2 * 10, 50, 50);
+    buttons[5] = new Settings("Settings", "assets/menu/man.png", 0, 0, 10 + 50 + 10 + 50 + 10, 570 + 50 + 2 * 10, 50, 50);
 
     selected = buttons[0];
   }

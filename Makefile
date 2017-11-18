@@ -12,6 +12,7 @@ OBJS    := menu/menu.o \
 					 editor/editor.o \
 					 editor/menu.o \
 					 editor/items.o \
+					 editor/settings.o \
 					 form/button.o \
            game/main.o \
            game/state.o \

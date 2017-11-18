@@ -14,4 +14,17 @@ namespace Editor {
     int startpos, endpos;
   };
 
+  class Settings : public Form::Button {
+  public:
+    Settings(const char *, const char *, int, int, int, int, int, int);
+    ~Settings();
+    void handle(SDL_Event);
+    void render();
+  private:
+    GameObject **objs;
+    SDL_Rect rect = { .x = 190, .y = 570, .w = 610, .h = 130 };
+    SDL_Color color;
+    int scroll;
+    int startpos, endpos;
+  };
 };
