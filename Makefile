@@ -2,7 +2,7 @@ NAME    := openCTS
 VERSION := 0.0.1
 CC      := g++ -c
 LD      := g++
-CFLAGS  := -Wall -g
+CFLAGS  := -Wall -g -std=c++11
 LDFLAGS := -lSDL2 -lSDL2_image -lSDL2_ttf
 
 OBJS    := menu/menu.o \

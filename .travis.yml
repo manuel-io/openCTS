@@ -1,0 +1,25 @@
+language: cpp
+
+dist: trusty
+
+addons:
+  apt:
+    packages:
+      - libsdl2-dev
+      - libsdl2-image-dev
+      - libsdl2-ttf-dev
+
+compiler:
+  - clang
+  - gcc
+
+os:
+- linux
+
+notifications:
+  email: false
+
+before_install:
+  - sudo apt-get update -qq
+
+script: make
