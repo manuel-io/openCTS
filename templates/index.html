@@ -1,0 +1,54 @@
+<!Doctype html>
+<html>
+  <head>
+    <title>Streets</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="static/styles/index.css">
+    <script src="static/scripts/streets.js"></script>
+  </head>
+  <body>
+
+  <header>
+    <nav>
+      <label id="game">Game</label>
+      <label id="clear">Clear</label>
+      <label id="edit">Streets</label>
+      <select id="streets">
+        <option></option>
+      </select>
+      <label id="line">Line</label>
+    </nav>
+  </header>
+
+  <main>
+    <canvas id="canvas" tabindex="1">
+    </canvas>
+  </main>
+
+  <footer>
+  </footer>
+
+  </body>
+  <script type="text/javascript" src="{{ url_for('static', filename='scripts/streets.js') }}"></script>
+  <script>
+    var fps = 15;
+
+    window.onload = (event) => {
+      Game.load((data) => {
+        console.log('data');
+        console.log(data);
+        let canvas = document.getElementById('canvas');
+        let game = new Game(canvas, data);
+        let menu = new Menu(game, data);
+
+        /* Handle Game Events */
+        canvas.onkeyup = game.handle;
+        canvas.onkeydown = game.handle;
+        canvas.onclick = game.handle;
+        canvas.onmousemove = game.handle;
+
+        setInterval(game.loop, 1000 / fps);
+      });
+    }
+  </script>
+</html>
